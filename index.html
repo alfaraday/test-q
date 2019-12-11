@@ -12,8 +12,17 @@
   <div class="answer-space"></div>
 
   <script>
+    let clickCounter = 0;
+
     function revealText() {
-      document.querySelector('.answer-space').innerHTML = `<p>Hypertext Markup Language, which defines the content and structure of a web page.</p>`;
+      clickCounter += 1;
+
+      if (clickCounter%2 == 0) {
+        document.querySelector('.answer-space').innerHTML = ``;
+      }
+      else {
+        document.querySelector('.answer-space').innerHTML = `<p>Hypertext Markup Language, which defines the content and structure of a web page.</p>`;
+      }
     }
 
     const el = document.getElementById("button");
