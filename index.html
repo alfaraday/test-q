@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TF test question</title>
+</head>
+<body>
+  <p>What is HTML?</p>
+  <button id="button">Click to reveal answer.</button>
+  <div class="answer-space"></div>
+
+  <script>
+    function revealText() {
+      document.querySelector('.answer-space').innerHTML = `<p>Hypertext Markup Language, which defines the content and structure of a web page.</p>`;
+    }
+
+    const el = document.getElementById("button");
+    el.addEventListener("click", revealText, false);
+  </script>
+</body>
+</html>
